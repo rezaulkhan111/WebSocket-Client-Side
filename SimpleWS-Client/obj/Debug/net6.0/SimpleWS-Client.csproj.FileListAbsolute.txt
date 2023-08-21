@@ -1,0 +1,15 @@
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\bin\Debug\net6.0\SimpleWS-Client.exe
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\bin\Debug\net6.0\SimpleWS-Client.deps.json
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\bin\Debug\net6.0\SimpleWS-Client.runtimeconfig.json
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\bin\Debug\net6.0\SimpleWS-Client.dll
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\bin\Debug\net6.0\SimpleWS-Client.pdb
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\obj\Debug\net6.0\SimpleWS-Client.csproj.AssemblyReference.cache
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\obj\Debug\net6.0\SimpleWS-Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\obj\Debug\net6.0\SimpleWS-Client.AssemblyInfoInputs.cache
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\obj\Debug\net6.0\SimpleWS-Client.AssemblyInfo.cs
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\obj\Debug\net6.0\SimpleWS-Client.csproj.CoreCompileInputs.cache
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\obj\Debug\net6.0\SimpleWS-Client.dll
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\obj\Debug\net6.0\refint\SimpleWS-Client.dll
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\obj\Debug\net6.0\SimpleWS-Client.pdb
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\obj\Debug\net6.0\SimpleWS-Client.genruntimeconfig.cache
+D:\H_Extra\Open Source Code\SimpleWS-Client\SimpleWS-Client\obj\Debug\net6.0\ref\SimpleWS-Client.dll
