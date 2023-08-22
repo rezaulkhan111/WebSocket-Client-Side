@@ -4,6 +4,8 @@
 
  [WebSocket Server Project](https://github.com/rezaulkhan111/WebSocket-Server-Side.git)
 
+ [Android WebSocket Client App](https://github.com/kimoandroid/Android-WebSocketClient.git)
+
 ## ScreenShot
 <p align="center">
   <a style="text-decoration:none" area-label="Android">
