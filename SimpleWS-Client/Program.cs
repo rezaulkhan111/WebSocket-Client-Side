@@ -3,16 +3,16 @@ using System.Text;
 
 var ws = new ClientWebSocket();
 
-string name;
-while (true)
+Console.WriteLine("Connecting to server");
+try
 {
-    Console.Write("Input name: ");
-    name = Console.ReadLine();
-    break;
+    await ws.ConnectAsync(new Uri("ws://192.168.0.110:8085/sendMessage?name=ConsoleApp"), CancellationToken.None);
+}
+catch (Exception aaa)
+{
+    Console.WriteLine(aaa.Message);
 }
 
-Console.WriteLine("Connecting to server");
-await ws.ConnectAsync(new Uri("ws://192.168.31.110:6969/ws"), CancellationToken.None);
 Console.WriteLine("");
 
 var receiveTask = Task.Run(async () =>
@@ -34,23 +34,39 @@ var receiveTask = Task.Run(async () =>
 
 var sendTask = Task.Run(async () =>
 {
+    Console.WriteLine("Enter terget name:");
+    string reciverName = Console.ReadLine();
+    Console.WriteLine($"Terget name: {reciverName}");
+    string reciverMessage;
     while (true)
     {
-        var message = Console.ReadLine();
-        if (message == "exit")
+        Console.Write("Message: ");
+        reciverMessage = Console.ReadLine();
+
+        string messageToSend = reciverName + ":" + reciverMessage;
+        if (reciverMessage == "exit")
         {
+            await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "Close", CancellationToken.None);
+
             break;
         }
-        var bytes = Encoding.UTF8.GetBytes(message);
+        var bytes = Encoding.UTF8.GetBytes(messageToSend);
         await ws.SendAsync(new ArraySegment<byte>(bytes), WebSocketMessageType.Text, true, CancellationToken.None);
     }
 });
 
 await Task.WhenAny(sendTask, receiveTask);
 
-if (ws.State != WebSocketState.Closed)
+try
 {
-    await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "Closing", CancellationToken.None);
+    if (ws.State != WebSocketState.Closed)
+    {
+        await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "Closing", CancellationToken.None);
+    }
+}
+catch (Exception aaa)
+{
+    Console.WriteLine(aaa.Message);
 }
 
 await Task.WhenAll(sendTask, receiveTask);
